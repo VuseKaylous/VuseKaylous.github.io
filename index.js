@@ -87,6 +87,9 @@ input.onkeyup = function(e){
     	else if (command == "clear") {
     		clear();
     	}
+		else if (command == "uet") {
+    		uet(args);
+    	}
     	else {
     		addLine("sorry, I'm not designed for that");
     	}
