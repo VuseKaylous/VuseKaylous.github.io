@@ -9,18 +9,26 @@ const json = {
         "Lập trình hướng đối tượng",
         "Xác suất thống kê"
     ],
-    "command" : ["classes"]
+    "command" : ["classes", "tkb"],
+    "tkb" : "https://docs.google.com/spreadsheets/d/1WQSPVmEnXhl4tlmPXa9LwtknxfoctP2DCT3vv9Fpkaw/edit#gid=544300632"
 };
 
 function uet(args) {
     if (!args) {
         json.command.forEach(printOut);
-        console.log(json.command[0]);
+        // console.log(json.command[0]);
     } else {
         if (args == "classes") {
             for (let i=0;i<json.classes.length;i = i + 1) {
                 addLine(json.classes[i] + ": " + json.name[i]);
             }
+        }
+        else if (args == "links") {
+            
+        } 
+        else if (args == "tkb") {
+            addLine("go to tkb");
+            window.open(json.tkb).focus();
         }
     }
 }

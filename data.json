@@ -8,5 +8,6 @@
         "Lập trình hướng đối tượng",
         "Xác suất thống kê"
     ],
-    "command" : ["classes"]
+    "command" : ["classes", "tkb"],
+    "tkb" : "https://docs.google.com/spreadsheets/d/1WQSPVmEnXhl4tlmPXa9LwtknxfoctP2DCT3vv9Fpkaw/edit#gid=544300632"
 }

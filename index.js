@@ -54,6 +54,12 @@ function twitch() {
 	window.open("https://twitch.tv").focus();
 }
 
+function source() {
+	addLine("open source:");
+
+	window.open("https://github.com/VuseKaylous/VuseKaylous.github.io").focus();
+}
+
 function clear() {
 	content.innerHTML = "";
 	input.value = "";
@@ -89,6 +95,9 @@ input.onkeyup = function(e){
     	}
 		else if (command == "uet") {
     		uet(args);
+    	}
+		else if (command == "source") {
+    		source();
     	}
     	else {
     		addLine("sorry, I'm not designed for that");
