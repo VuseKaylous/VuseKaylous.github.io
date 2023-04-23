@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-SemiBoldItalic.ttf");
+}
+
 /* CSS Variables */
 :root {
   --normal-font: 400;
@@ -11,10 +16,14 @@
   --transition: 0.4s ease-in;
 }
 
+
 /* Smooth scroll effect */
 html {
   scroll-behavior: smooth;
+  font-family: "Source Sans Pro";
 }
+
+
 
 /* Resets */
 * {
@@ -54,6 +63,7 @@ a:hover {
   --bs-aspect-ratio: 50%;
   /* padding-bottom: 20%; */
   aspect-ratio: 16 / 9;
+  filter: brightness(75%);
 }
 
 .display-1 {
@@ -75,30 +85,26 @@ a:hover {
 
 /* About */
 
-.about {
-    background-image: url("../images/decoration.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: 100% 500px;
-    height: 500px;
-    /* width: 100%; */
+@media (max-width: 768px) {
+  .about-container {
+    width: 100%;
+  }
 }
 
-.about-header {
-    text-align: center;
-    color: white !important;
-    z-index: 1;
-    font-size: 3rem;
-    padding-top: 70px;
-    padding-bottom: 20px;
+@media (min-width: 768px) {
+  .about-container {
+    width: 50%;
+  }
 }
 
-.about-text {
-    text-align: left;
-    color: white !important;
-    z-index: 1;
-    font-size: 1.5rem;
-    padding-left: 100px;
-    padding-right: 100px;
+.about-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: lighten;
+  /* opacity: 0.5; */
 }
 
 /* Products tab */
@@ -144,7 +150,7 @@ a:hover {
 /* Products */
 
 .container-sm {
-    border: 2px solid #C8DAE4;
+    border: 2px solid #ffe0e0;
 }
 
 .img-cover {

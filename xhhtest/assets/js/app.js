@@ -70,3 +70,50 @@ $(document).ready(function () {
 	// Active tab đầu tiên khi trang web được chạy
 	activeTab($('.tab li:first-child'));
 });
+
+$(function () {
+	// Initially disable language switching button.
+	$('#switch-lang').css({'pointer-events':'none',
+	 'cursor':'default'}).attr('disabled','disabled');
+	
+	$('[lang="vi"]').hide();
+
+	$('#switch-lang-en').click(function (event) {
+		$('[lang="vi"]').hide();
+		$('[lang="en"]').show();
+		});
+
+	$('#switch-lang-vi').click(function (event) {
+		$('[lang="vi"]').show();
+		$('[lang="en"]').hide();
+		});
+  
+	// function langButtonListen() {
+	//   $('#switch-lang').click(function (event) {
+	// 	event.preventDefault();
+	// 	$('[lang="vi"]').toggle();
+	// 	$('[lang="en"]').toggle();
+	// 	// Switch cookie stored language.
+	// 	if ($.cookie('lang') === 'en') {
+	// 	  $.cookie('lang', 'vi', { expires: 7 });
+	// 	} else {
+	// 	  $.cookie('lang', 'en', { expires: 7 });
+	// 	}
+	//   });
+	//   // Enable lang switching button.
+	//   $('#switch-lang').css({'pointer-events':'auto',
+	//    'cursor':'pointer'}).removeAttr('disabled');
+	// }
+  
+	// Check if language cookie already exists.
+	// if ($.cookie('lang')) {
+	//   var lang = $.cookie('lang');
+	//   if (lang === 'en') {
+	// 	$('[lang="vi"]').hide();
+	// 	langButtonListen();
+	//   } else {
+	// 	$('[lang="en"]').hide();
+	// 	langButtonListen();
+	//   }
+	// }
+  });
