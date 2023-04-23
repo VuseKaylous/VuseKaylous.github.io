@@ -24,8 +24,25 @@
 //     document.documentElement.scrollTop = 0;
 // }
 
-(function($) {
+// (function($) {
 
+	// "use strict";
+
+	// $('nav .dropdown').hover(function(){
+	// 	var $this = $(this);
+	// 	$this.addClass('show');
+	// 	$this.find('> a').attr('aria-expanded', true);
+	// 	$this.find('.dropdown-menu').addClass('show');
+	// }, function(){
+	// 	var $this = $(this);
+	// 		$this.removeClass('show');
+	// 		$this.find('> a').attr('aria-expanded', false);
+	// 		$this.find('.dropdown-menu').removeClass('show');
+	// });
+
+// })(jQuery);
+
+$(document).ready(function () {
 	"use strict";
 
 	$('nav .dropdown').hover(function(){
@@ -40,9 +57,6 @@
 			$this.find('.dropdown-menu').removeClass('show');
 	});
 
-})(jQuery);
-
-$(document).ready(function () {
 	// Hàm active tab nào đó
 	function activeTab(obj) {
 		// Xóa class active tất cả các tab
@@ -88,20 +102,20 @@ $(document).ready(function () {
 
 $(function () {
 	// Initially disable language switching button.
-	$('#switch-lang').css({'pointer-events':'none',
-	 'cursor':'default'}).attr('disabled','disabled');
+	// $('#switch-lang').css({'pointer-events':'none',
+	//  'cursor':'default'}).attr('disabled','disabled');
 	
-	$('[lang="vi"]').hide();
+	// $('[lang="vi"]').hide();
 
-	$('#switch-lang-en').click(function (event) {
-		$('[lang="vi"]').hide();
-		$('[lang="en"]').show();
-		});
+	// $('#switch-lang-en').click(function (event) {
+	// 	$('[lang="vi"]').hide();
+	// 	$('[lang="en"]').show();
+	// 	});
 
-	$('#switch-lang-vi').click(function (event) {
-		$('[lang="vi"]').show();
-		$('[lang="en"]').hide();
-		});
+	// $('#switch-lang-vi').click(function (event) {
+	// 	$('[lang="vi"]').show();
+	// 	$('[lang="en"]').hide();
+	// 	});
   
 	// function langButtonListen() {
 	//   $('#switch-lang').click(function (event) {
