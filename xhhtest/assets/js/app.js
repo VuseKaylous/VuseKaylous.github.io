@@ -69,6 +69,21 @@ $(document).ready(function () {
 
 	// Active tab đầu tiên khi trang web được chạy
 	activeTab($('.tab li:first-child'));
+
+	$('#switch-lang').css({'pointer-events':'none',
+	 'cursor':'default'}).attr('disabled','disabled');
+	
+	$('[lang="vi"]').hide();
+
+	$('#switch-lang-en').click(function (event) {
+		$('[lang="vi"]').hide();
+		$('[lang="en"]').show();
+		});
+
+	$('#switch-lang-vi').click(function (event) {
+		$('[lang="vi"]').show();
+		$('[lang="en"]').hide();
+		});
 });
 
 $(function () {
